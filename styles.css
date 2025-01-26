@@ -1,0 +1,735 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.promo-banner {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+}
+
+@media (max-width: 480px) {
+  .promo-banner {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+
+
+/* Top Navigation */
+/* Top Navigation */
+/* Top Navigation */
+.top-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #000;
+  background-color: #fff;
+}
+
+.top-navigation a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+.top-navigation .search-icon {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none; /* Hidden by default */
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger.active {
+  color: #f78b42; /* Optional: Change color when active */
+}
+
+.mobile-menu {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.open {
+  display: flex; /* Show menu when toggled */
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .nav-left,
+  .nav-right {
+    display: none; /* Hide main nav sections */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger button */
+  }
+}
+
+
+
+/* Main Navigation */
+/* Main Navigation */
+.main-navigation {
+  display: flex;
+  justify-content: space-between; /* Keeps the logo on the left */
+  align-items: center; /* Vertically centers everything */
+  padding: 20px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+}
+
+.logo-section {
+  flex-shrink: 0; /* Prevents the logo from shrinking */
+}
+
+.logo-section h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.logo-section p {
+  font-size: 12px;
+  font-weight: normal;
+  color: #555;
+}
+
+.nav-links {
+  position: absolute; /* Allows centering while keeping the logo on the left */
+  left: 50%; /* Moves the nav links to the center */
+  transform: translateX(-50%); /* Centers the nav links by shifting half of their width */
+  display: flex;
+  gap: 30px; /* Adds spacing between links */
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #000;
+  position: relative; /* Required for the arrow positioning */
+}
+
+.nav-links a::after {
+  content: ' ';
+  display: inline-block;
+  border: 5px solid transparent;
+  border-top-color: #000; /* Black arrow */
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .main-navigation {
+    flex-direction: column; /* Stacks the logo and nav links */
+    align-items: center; /* Centers everything */
+    padding: 15px 20px; /* Reduce padding for smaller screens */
+  }
+
+  .nav-links {
+    position: static; /* Removes absolute positioning */
+    transform: none; /* Removes centering logic since flex handles it */
+    flex-wrap: wrap; /* Allows links to wrap if they don’t fit on one line */
+    justify-content: center; /* Centers links */
+    margin-top: 10px; /* Adds spacing between logo and links */
+  }
+
+  .nav-links a {
+    font-size: 16px; /* Slightly larger font for better readability */
+  }
+
+  .logo-section h1 {
+    font-size: 24px; /* Reduce logo size slightly */
+  }
+
+  .logo-section p {
+    font-size: 10px; /* Reduce subtitle size slightly */
+  }
+}
+
+
+
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align content to the right by default */
+  height: 100vh; /* Full height on larger screens */
+  background-image: url('/assets/photobackground.jpeg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px; /* Adds padding for better spacing */
+}
+
+.hero-content {
+  text-align: right; /* Align text to the right by default */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px; /* Restricts content width for better readability */
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.shop-now {
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.shop-now:hover {
+  background-color: #fff;
+  color: #f78b42;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero-content {
+    max-width: 400px; /* Slightly smaller width for tablets */
+  }
+
+  .hero-content h1 {
+    font-size: 32px; /* Adjust headline size */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    height: auto; /* Let content dictate height */
+    padding: 30px; /* Add more padding for smaller screens */
+  }
+
+  .hero-content {
+    text-align: center; /* Center-align text */
+    max-width: 90%; /* Use most of the screen width */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .hero-content h1 {
+    font-size: 28px; /* Smaller headline size for smaller screens */
+    margin-bottom: 15px;
+  }
+
+  .shop-now {
+    padding: 8px 15px; /* Reduce button size */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 24px; /* Even smaller headline for very small screens */
+  }
+
+  .shop-now {
+    padding: 6px 12px; /* Compact button for very small screens */
+    font-size: 12px;
+  }
+}
+
+
+
+/* Carousel Styling */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Limits the maximum width */
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%; /* Ensures the track fits within the container */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 100%; /* Each item takes up 100% width initially */
+  text-align: center;
+  list-style: none;
+  padding: 20px;
+}
+
+.carousel-item img {
+  width: 100%; /* Image takes full width of the container */
+  max-width: 100%; /* Prevents exceeding the container */
+  height: auto; /* Maintains the aspect ratio */
+  margin: 0 auto;
+  border-radius: 8px; /* Optional: Smoothens corners */
+  object-fit: cover; /* Ensures proper fit for all images */
+}
+
+.carousel-item p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Carousel Buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .carousel {
+    max-width: 900px; /* Slightly smaller width for tablets */
+  }
+
+  .carousel-item img {
+    max-width: 90%; /* Restricts image size for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 100%; /* Full-width carousel for mobile */
+  }
+
+  .carousel-item {
+    flex: 0 0 100%; /* Single item per slide */
+    padding: 15px; /* Reduces padding for smaller screens */
+  }
+
+  .carousel-item img {
+    max-width: 90%; /* Slightly smaller image size */
+  }
+
+  .carousel-button {
+    padding: 8px 15px; /* Smaller buttons for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item img {
+    max-width: 80%; /* Compact image size for very small screens */
+  }
+
+  .carousel-button {
+    padding: 6px 12px; /* Even smaller buttons for small devices */
+  }
+}
+
+
+
+
+/* Store Locator Section */
+.store-locator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #000;
+  color: #fff;
+}
+
+.store-info {
+  flex: 1;
+  padding: 20px;
+}
+
+.store-info h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.store-info p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.search-button {
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.store-map {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.store-map img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .store-locator {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .store-map {
+    margin-top: 20px;
+  }
+}
+
+
+
+
+/* Featured Products Section */
+.featured-products {
+  padding: 40px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.featured-products h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.product-item img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-item p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+}
+
+
+
+
+/* Testimonials Section */
+.testimonials {
+  padding: 40px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.testimonials h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.testimonials-carousel {
+  position: relative;
+  max-width: 800px; /* Limits the width of the carousel */
+  margin: 0 auto;
+}
+
+.testimonial-track-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.testimonial-item {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.testimonial-item.active {
+  display: block; /* Ensures only the active testimonial is visible */
+}
+
+.testimonial-item p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+  white-space: normal; /* Ensures text wraps properly */
+  overflow: visible; /* Prevents clipping of text */
+  background: transparent; /* Removes any background */
+}
+
+.testimonial-item h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  background: transparent; /* Ensures no background for h4 */
+}
+
+/* Testimonial Buttons */
+.testimonial-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black for visibility */
+  color: #fff; /* White text for contrast */
+  border: none; /* Removes any visible borders */
+  padding: 10px 20px; /* Adds space for the button */
+  cursor: pointer;
+  z-index: 100;
+  border-radius: 5px; /* Smooth corners */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.testimonial-button:hover {
+  background-color: #000; /* Darkens the button on hover */
+  color: #fff; /* Ensures text remains visible */
+}
+
+.testimonial-button.prev {
+  left: 10px; /* Positions the left button slightly inside the container */
+}
+
+.testimonial-button.next {
+  right: 10px; /* Positions the right button slightly inside the container */
+}
+
+/* Responsive Adjustments for Small Screens */
+@media (max-width: 768px) {
+  .testimonial-button {
+    padding: 8px 16px; /* Smaller button size for mobile */
+    top: auto; /* Adjust positioning to avoid overlap */
+    bottom: 10px; /* Position the buttons below the testimonials */
+  }
+
+  .testimonial-button.prev {
+    left: 30%; /* Centers the button horizontally */
+  }
+
+  .testimonial-button.next {
+    right: 30%; /* Centers the button horizontally */
+  }
+
+  .testimonials h2 {
+    font-size: 20px; /* Adjusts heading size */
+  }
+
+  .testimonial-item p {
+    font-size: 14px; /* Smaller text for mobile */
+    line-height: 1.4; /* Slightly reduced line spacing */
+  }
+
+  .testimonial-item h4 {
+    font-size: 12px; /* Smaller author name */
+  }
+}
+
+/* Additional Cleanup for Unwanted Artifacts */
+.testimonial-button::before,
+.testimonial-button::after {
+  content: none; /* Removes any pseudo-elements if present */
+}
+
+.testimonial-item p::before,
+.testimonial-item p::after {
+  content: none; /* Ensures no extra styling is applied around text */
+}
+
+@media (max-width: 480px) {
+  .testimonials h2 {
+    font-size: 18px; /* Compact heading size */
+  }
+
+  .testimonial-item p {
+    font-size: 13px;
+    line-height: 1.4; /* Tighter line spacing */
+  }
+
+  .testimonial-item h4 {
+    font-size: 11px;
+  }
+
+  .testimonial-button {
+    padding: 4px; /* Compact buttons for smaller devices */
+  }
+}
+
+
+
+
+
+
+/* Footer Section */
+.footer {
+  background-color: #fff;
+  padding: 40px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #000;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.newsletter p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.subscribe-button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+}
