@@ -43,5 +43,5 @@ Clone the repository:
 bash
 Copy
 Edit
-git clone https://github.com/your-username/repository-name.git
+git clone https://github.com/LordArbi/Front-End-Test-Shero.git
 Open index.html in your browser to view the project.
