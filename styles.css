@@ -188,24 +188,18 @@ body {
   }
 }
 
-
-
-
 /* Hero Section */
 .hero-section {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Alinimi i përmbajtjes në të djathtë */
-  height: 100vh; /* Lartësia 100% e viewport-it */
-  background-image: url('/assets/test-background.png'); /* Rruga e imazhit të sfondit */
-  background-size: cover; /* Përshtatja e imazhit për të mbuluar hapësirën */
-  background-position: center; /* Vendosja e imazhit në qendër */
-  background-repeat: no-repeat; /* Parandalon përsëritjen e imazhit të sfondit */
-  padding: 20px; /* Hapesirë e brendshme për më shumë hapësirë */
-  position: relative; /* Aktivizon mundësinë për të përdorur z-index */
-  z-index: -5; /* Vendosja e elementit në një layer poshtë elementeve të tjerë */
+  justify-content: flex-end; /* Align content to the right by default */
+  height: 100vh; /* Full height on larger screens */
+  background-image: url('./assets/testbackground.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px; /* Adds padding for better spacing */
 }
-
 
 .hero-content {
   text-align: right; /* Align text to the right by default */
