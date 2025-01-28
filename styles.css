@@ -197,7 +197,7 @@ body {
   align-items: center;
   justify-content: flex-end; /* Alinimi i përmbajtjes në të djathtë */
   height: 100vh; /* Lartësia 100% e viewport-it */
-  background-image: url('/assets/testbackground.png'); /* Rruga e imazhit të sfondit */
+  background-image: url('/assets/test-background.png'); /* Rruga e imazhit të sfondit */
   background-size: cover; /* Përshtatja e imazhit për të mbuluar hapësirën */
   background-position: center; /* Vendosja e imazhit në qendër */
   background-repeat: no-repeat; /* Parandalon përsëritjen e imazhit të sfondit */
