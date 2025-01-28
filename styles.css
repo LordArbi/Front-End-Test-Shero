@@ -197,7 +197,7 @@ body {
   align-items: center;
   justify-content: flex-end; /* Align content to the right by default */
   height: 100vh; /* Full height on larger screens */
-  background-image: url('/assets/photobackground.png'); /* Replace with your image path */
+  background-image: url('/assets/testbackground.png'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
